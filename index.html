@@ -1,234 +1,466 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <meta name="theme-color" content="#fbf5f0">
+
 <title>Celebrating the Queen of Our Hearts — Amma</title>
 
+
+
 <style>
+
 :root {
+
   --paper: #fffaf6;
+
   --rose: #e9c5c8;
+
   --deep: #a45f73;
+
   --plum: #60485d;
+
   --ink: #493d46;
+
   --muted: #877784;
+
   --sage: #e8eee5;
+
   --line: #eadbd8;
+
   --serif: Georgia, 'Times New Roman', serif;
+
 }
 
-* { box-sizing: border-box; }
+
+
+
+
+{ box-sizing: border-box; }
+
 
 html {
+
   scroll-behavior: smooth;
+
   scroll-padding-top: 85px;
+
 }
+
+
 
 body {
+
   margin: 0;
+
   background: var(--paper);
+
   color: var(--ink);
+
   font: 16px/1.65 Arial, sans-serif;
+
 }
+
+
 
 a { color: inherit; }
+
 button, input, textarea { font: inherit; }
 
+
+
 .nav {
+
   position: sticky;
+
   top: 0;
+
   z-index: 5;
+
   background: #fffaf6ed;
+
   backdrop-filter: blur(12px);
+
   border-bottom: 1px solid var(--line);
+
   padding: 12px max(18px, calc((100% - 1100px)/2));
+
   display: flex;
+
   justify-content: space-between;
+
   gap: 16px;
+
   align-items: center;
+
 }
+
+
 
 .brand {
+
   font: 20px var(--serif);
+
   color: var(--plum);
+
   white-space: nowrap;
+
 }
 
+
+
 .links {
+
   display: flex;
+
   gap: 15px;
+
   overflow: auto;
+
   white-space: nowrap;
+
   font-size: 12px;
+
   color: var(--muted);
+
 }
+
+
 
 .links a { text-decoration: none; }
 
+
+
 .hero {
+
   min-height: 82vh;
+
   display: grid;
+
   place-items: center;
+
   text-align: center;
+
   padding: 65px 20px;
+
   background:
+
     radial-gradient(ellipse at 15% 20%, #f6e5e3, transparent 35%),
+
     radial-gradient(ellipse at 85% 75%, #e7eee3, transparent 35%),
+
     linear-gradient(145deg, #fffaf6, #f9efeb);
+
   position: relative;
+
   overflow: hidden;
+
 }
+
+
 
 .hero:before, .hero:after {
+
   content: "✿";
+
   position: absolute;
+
   font-size: 160px;
+
   color: #a45f731c;
+
 }
 
+
+
 .hero:before { top: 0; left: -24px; }
+
 .hero:after { right: -20px; bottom: -10px; }
+
+
 
 .hero-inner { max-width: 800px; position: relative; }
 
+
+
 .eyebrow, .kicker {
+
   font-size: 10px;
+
   text-transform: uppercase;
+
   letter-spacing: .22em;
+
   color: var(--deep);
+
   font-weight: bold;
+
 }
+
+
 
 h1, h2, h3 {
+
   font-family: var(--serif);
+
   font-weight: 400;
+
   line-height: 1.14;
+
 }
 
+
+
 h1 {
+
   font-size: clamp(44px, 8vw, 86px);
+
   color: var(--plum);
+
   margin: 20px 0;
+
 }
+
+
 
 h1 em { color: var(--deep); }
 
+
+
 .hero p {
+
   font: clamp(18px, 2.6vw, 24px)/1.5 var(--serif);
+
   color: #796979;
+
   max-width: 650px;
+
   margin: 0 auto 24px;
+
 }
+
+
 
 .date {
+
   font-size: 11px;
+
   letter-spacing: .14em;
+
   text-transform: uppercase;
+
   color: var(--muted);
+
   margin: 20px;
+
 }
+
+
 
 .btn {
+
   border: 0;
+
   border-radius: 99px;
+
   padding: 12px 20px;
+
   background: var(--plum);
+
   color: white;
+
   text-decoration: none;
+
   display: inline-block;
+
   cursor: pointer;
+
 }
+
+
 
 .btn.light {
+
   background: white;
+
   color: var(--plum);
+
   border: 1px solid var(--line);
+
 }
+
+
 
 .section {
+
   max-width: 1080px;
+
   margin: auto;
+
   padding: 78px 20px;
+
 }
+
+
 
 .head {
+
   text-align: center;
+
   max-width: 700px;
+
   margin: 0 auto 38px;
+
 }
 
+
+
 .head h2 {
+
   font-size: clamp(34px, 5vw, 52px);
+
   color: var(--plum);
+
   margin: 10px 0;
+
 }
+
+
 
 .head p, .note { color: var(--muted); }
 
+
+
 .museum {
+
   background: #f8f1ec;
+
   max-width: none;
+
 }
 
+
+
 .museum > .head, .timeline {
+
   max-width: 1000px;
+
   margin-left: auto;
+
   margin-right: auto;
+
 }
+
+
 
 .timeline { position: relative; }
 
+
+
 .timeline:before {
+
   content: "";
+
   position: absolute;
+
   left: 16px;
+
   top: 10px;
+
   bottom: 10px;
+
   width: 1px;
+
   background: linear-gradient(var(--rose), #b9c8b2, #c6a66a);
+
 }
+
+
 
 .chapter {
+
   padding: 0 0 26px 48px;
+
   position: relative;
+
 }
+
+
 
 .chapter:before {
+
   content: "";
+
   position: absolute;
+
   left: 8px;
+
   top: 12px;
+
   width: 16px;
+
   height: 16px;
+
   border-radius: 50%;
+
   background: var(--paper);
+
   border: 2px solid var(--deep);
+
 }
+
+
 
 .chapter-card {
+
   display: grid;
+
   grid-template-columns: .85fr 1.15fr;
+
   gap: 22px;
+
   padding: 17px;
+
   background: #fffaf7;
+
   border: 1px solid var(--line);
+
   border-radius: 19px;
+
 }
 
+
+
 .photo {
+
   min-height: 205px;
+
   border: 1px dashed #cdaeb5;
+
   border-radius: 13px;
+
   background: linear-gradient(140deg, #f7e4e7, #f6f0e8 60%, #e8eee5);
+
   text-align: center;
+  
   display: flex;
+  
   align-items: center;
+  
   justify-content: center;
+  
   padding: 0;
+  
   overflow: hidden;
+
   color: #8e6b7c;
+
 }
 
 .photo img {
@@ -240,657 +472,1610 @@ h1 em { color: var(--deep); }
 }
 
 .photo span { font-size: 30px; display: block; }
+
 .photo small { display: block; font-size: 11px; }
 
+
+
 .tag {
+
   font-size: 10px;
+
   text-transform: uppercase;
+
   letter-spacing: .1em;
+
   background: #f5e7e9;
+
   color: #98677a;
+
   padding: 5px 9px;
+
   border-radius: 20px;
+
   display: inline-block;
+
 }
+
+
 
 .chapter h3, .card h3 {
+
   font-size: 26px;
+
   color: var(--plum);
+
   margin: 12px 0;
+
 }
+
+
 
 .chapter p {
+
   font-size: 14px;
+
   color: #746772;
+
   margin: 0 0 12px;
+
 }
+
+
 
 .caption {
+
   font: italic 16px var(--serif) !important;
+
   color: var(--deep) !important;
+
 }
+
+
 
 .two {
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 22px;
+
 }
+
+
 
 .card {
+
   padding: 24px;
+
   background: white;
+
   border: 1px solid var(--line);
+
   border-radius: 20px;
+
   box-shadow: 0 12px 35px #60485d10;
+
 }
+
+
 
 .skycard {
+
   background: linear-gradient(150deg, #262b49, #45405b);
+
   color: #fffaf6;
+
   border-radius: 23px;
+
   padding: 23px;
+
   overflow: hidden;
+
 }
 
+
+
 .skycard h3 {
+
   color: #fff0dd;
+
   font-size: 27px;
+
   margin: 0 0 5px;
+
 }
+
+
 
 .skycard p { color: #d8d1df; font-size: 13px; }
 
+
+
 .sky { width: 100%; max-height: 380px; min-height: 240px; }
+
 .star { cursor: pointer; outline: none; }
+
 .star circle { transition: r .2s; }
 
+
+
 .star:hover circle, .star:focus circle {
+
   r: 9;
+
   fill: #fff4c6;
+
 }
+
+
 
 .star text {
+
   font-size: 11px;
+
   fill: #f6e8c9;
+
   pointer-events: none;
+
 }
+
+
 
 .detail {
+
   border: 1px solid #ffffff35;
+
   border-radius: 12px;
+
   padding: 13px;
+
   min-height: 85px;
+
   background: #ffffff09;
+
 }
+
+
 
 .detail strong {
+
   font: 20px var(--serif);
+
   color: #ffe8bd;
+
 }
+
+
 
 .detail p { margin: 4px 0; }
+
 .upload { display: block; margin-top: 15px; font-size: 12px; }
+
 .upload input { max-width: 100%; font-size: 11px; }
 
+
+
 .newspaper {
+
   max-width: 850px;
+
   margin: auto;
+
   padding: clamp(16px, 4vw, 35px);
+
   background: #f0e7d8;
+
   border: 1px solid #d7c6ad;
+
   box-shadow: 7px 8px 0 #c8b59c;
+
   color: #282521;
+
 }
+
+
 
 .mast {
+
   text-align: center;
+
   border-bottom: 4px double #34302a;
+
   padding-bottom: 13px;
+
 }
+
+
 
 .mast small {
+
   letter-spacing: .24em;
+
   text-transform: uppercase;
+
 }
+
+
 
 .mast h3 {
+
   font: bold clamp(30px, 7vw, 58px) Georgia;
+
   margin: 6px 0;
+
   color: #282521;
+
 }
+
+
 
 .paper-meta {
+
   display: flex;
+
   justify-content: space-between;
+
   gap: 8px;
+
   border-bottom: 1px solid #aaa08e;
+
   padding: 8px 0;
+
   font-size: 9px;
+
   text-transform: uppercase;
+
   letter-spacing: .08em;
+
 }
+
+
 
 .headline {
+
   font: bold clamp(27px, 5vw, 45px)/1.05 Georgia;
+
   text-align: center;
+
   margin: 22px auto 12px;
+
   max-width: 680px;
+
 }
+
+
 
 .deck {
+
   text-align: center;
+
   font: italic 17px Georgia;
+
   max-width: 650px;
+
   margin: 0 auto 22px;
+
 }
+
+
 
 .columns {
+
   display: grid;
+
   grid-template-columns: 1.2fr .8fr;
+
   gap: 20px;
+
   border-top: 1px solid #aaa08e;
+
   padding-top: 16px;
+
 }
+
+
 
 .columns h4 { font: bold 20px Georgia; margin: 0 0 8px; }
+
 .columns p { font: 14px/1.65 Georgia; }
 
+
+
 .paperbox {
+
   border: 1px solid #aaa08e;
+
   padding: 12px;
+
   margin-bottom: 12px;
+
 }
+
+
 
 .paperbox strong { font: 18px Georgia; }
 
+
+
 .paperfoot {
+
   text-align: center;
+
   border-top: 4px double #34302a;
+
   padding-top: 12px;
+
   font: italic 15px Georgia;
+
 }
+
+
 
 .future {
+
   background: linear-gradient(#f7f0e9, #fbf7f0);
+
   max-width: none;
+
 }
+
+
 
 .future > .head, .futuregrid, .wish {
+
   max-width: 1000px;
+
   margin-left: auto;
+
   margin-right: auto;
+
 }
+
+
 
 .futuregrid {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 14px;
+
 }
 
+
+
 .futurecard {
+
   padding: 20px;
+
   border: 1px solid var(--line);
+
   background: #fffaf6;
+
   border-radius: 17px;
+
 }
+
+
 
 .num { font: 34px var(--serif); color: #d5b1b7; }
 
+
+
 .futurecard h3 {
+
   font-size: 22px;
+
   color: var(--plum);
+
   margin: 3px 0 8px;
+
 }
+
+
 
 .futurecard p { font-size: 13px; color: var(--muted); }
 
+
+
 .futurecard input {
+
   width: 100%;
+
   padding: 9px;
+
   border: 1px solid var(--line);
+
   border-radius: 9px;
+
 }
+
+
 
 .wish {
+
   text-align: center;
+
   background: #fffaf6;
+
   border: 1px solid var(--line);
+
   border-radius: 18px;
+
   padding: 25px;
+
   margin-top: 24px;
+
 }
+
+
 
 .wish h3 { font-size: 27px; color: var(--plum); }
+
 .wish p { font: 19px/1.6 var(--serif); color: #796979; }
 
+
+
 .envelopes {
+
   display: grid;
+
   grid-template-columns: repeat(5, 1fr);
+
   gap: 10px;
+
 }
+
+
 
 .envelope {
+
   min-height: 100px;
+
   border: 1px solid #ead6d6;
+
   background: linear-gradient(145deg, #fff9f5, #f3e3e6);
+
   border-radius: 12px;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   cursor: pointer;
+
   color: var(--plum);
+
   padding: 8px;
+
 }
+
+
 
 .envelope:hover, .envelope:focus {
+
   outline: 2px solid #d5a6b0;
+
   transform: translateY(-3px);
+
 }
+
+
 
 .envelope span:first-child { font-size: 25px; }
+
 .envelope small { font-size: 10px; color: var(--deep); }
+
 .envelope em { font: 12px var(--serif); text-align: center; }
 
+
+
 .letter {
+
   display: none;
+
   background: #fff7f0;
+
   border: 1px solid var(--line);
+
   border-radius: 18px;
+
   padding: 24px;
+
   margin-top: 20px;
+
 }
+
+
 
 .letter.open { display: block; }
+
 .letter h3 { font-size: 28px; color: var(--plum); }
 
+
+
 .letter textarea {
+
   width: 100%;
+
   min-height: 120px;
+
   padding: 12px;
+
   border: 1px solid var(--line);
+
   border-radius: 10px;
+
 }
+
+
 
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 
+
+
 .final {
+
   text-align: center;
+
   padding: 90px 20px;
+
   background: radial-gradient(ellipse at top, #f7e5e4, transparent 60%), #f3eee7;
+
 }
+
+
 
 .finalinner { max-width: 740px; margin: auto; }
 
+
+
 .final h2 {
+
   font-size: clamp(38px, 7vw, 68px);
+
   color: var(--plum);
+
   margin: 17px 0;
+
 }
 
+
+
 .final p {
+
   font: 20px/1.65 var(--serif);
+
   color: #796979;
+
   white-space: pre-line;
+
 }
+
+
 
 .signature { font: italic 23px var(--serif); color: var(--deep); }
 
+
+
 .editor { background: #f7f0eb; padding: 38px 20px; }
 
+
+
 .editor details {
+
   max-width: 850px;
+
   margin: auto;
+
   background: #fffaf6;
+
   border: 1px solid var(--line);
+
   border-radius: 15px;
+
   padding: 18px;
+
 }
+
+
 
 .editor summary { font: 22px var(--serif); color: var(--plum); cursor: pointer; }
 
+
+
 .editorgrid {
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 12px;
+
   margin-top: 16px;
+
 }
+
+
 
 .editor label { font-size: 12px; color: var(--muted); display: block; }
 
+
+
 .editor input, .editor textarea {
+
   width: 100%;
+
   padding: 10px;
+
   border: 1px solid var(--line);
+
   border-radius: 9px;
+
 }
+
+
 
 .wide { grid-column: 1 / -1; }
 
+
+
 .modalbg {
+
   display: none;
+
   position: fixed;
+
   inset: 0;
+
   z-index: 20;
+
   background: #2c243b99;
+
   place-items: center;
+
   padding: 18px;
+
 }
+
+
 
 .modalbg.show { display: grid; }
 
+
+
 .modal {
+
   background: var(--paper);
+
   padding: 28px;
+
   border-radius: 20px;
+
   max-width: 500px;
+
   width: 100%;
+
 }
+
+
 
 .modal h3 { font-size: 30px; color: var(--plum); }
+
 .close { float: right; border: 0; background: transparent; font-size: 25px; cursor: pointer; }
 
+
+
 .toast {
+
   position: fixed;
+
   bottom: 16px;
+
   left: 50%;
+
   transform: translateX(-50%);
+
   z-index: 40;
+
   display: none;
+
   background: var(--plum);
+
   color: white;
+
   padding: 9px 15px;
+
   border-radius: 30px;
+
   font-size: 12px;
+
 }
+
+
 
 .toast.show { display: block; }
 
+
+
 footer {
+
   text-align: center;
+
   padding: 22px;
+
   color: var(--muted);
+
   font-size: 11px;
+
 }
+
+
 
 @media (max-width: 760px) {
+
   .nav { display: block; padding: 10px 15px; }
+
   .brand { font-size: 17px; }
+
   .links { margin-top: 7px; gap: 13px; }
+
   .section { padding: 62px 16px; }
+
   .chapter-card { grid-template-columns: 1fr; padding: 12px; gap: 14px; }
+
   .photo { min-height: 180px; }
+
   .two { grid-template-columns: 1fr; }
+
   .columns { grid-template-columns: 1fr; }
+
   .futuregrid { grid-template-columns: 1fr 1fr; }
+
   .envelopes { grid-template-columns: repeat(3, 1fr); }
+
   .editorgrid { grid-template-columns: 1fr; }
+
   .wide { grid-column: auto; }
+
   .paper-meta { font-size: 8px; }
+
   .hero { min-height: 75vh; }
+
 }
+
+
 
 @media (max-width: 390px) {
+
   .futuregrid { grid-template-columns: 1fr; }
+
   .envelopes { grid-template-columns: repeat(2, 1fr); }
+
 }
+
+
 
 @media (prefers-reduced-motion: reduce) {
+
   html { scroll-behavior: auto; }
+
   *, *:before, *:after {
+
     animation: none !important;
+
     transition: none !important;
+
   }
+
 }
+
 </style>
+
 </head>
+
 <body>
 
+
+
 <header class="nav">
+
   <div class="brand" id="brand">For Amma, with all our love</div>
+
+  </nav>
+
 </header>
 
+
+
 <section class="hero" id="home">
+
   <div class="hero-inner">
+
     <div class="eyebrow">Many roles, one superwoman: Mom</div>
+
     <h1>Celebrating the<br><em>Queen of Our Hearts</em></h1>
+
     <p id="subtitle">
+
       A celebration of the life you've lived, the love you've given,
+
       and all the beautiful things still waiting for you.
+
     </p>
+
     <div class="date" id="heroDate">30 October 2026 · A celebration of Amma</div>
+
     <a class="btn" href="#museum">Step inside ✦</a>
+
   </div>
+
 </section>
+
+
 
 <main>
+
 <section class="section museum" id="museum">
+
   <div class="head">
+
     <div class="kicker">Gallery No. 01</div>
+
     <h2>The Museum of Your Life</h2>
+
     <p>Fifty years cannot fit into a few pages. But perhaps we can gather the moments, places and little pieces of you that made this life yours.</p>
+
   </div>
+
+
 
   <div class="timeline">
+
     <article class="chapter">
+
       <div class="chapter-card">
-        <div class="photo">
-          <img src="amma1.jpeg" alt="Amma at Valparai">
-        </div>
+
+        <div class="photo"><div><span>❀</span><b>Photo 01 · The beginning</b><small>Replace with a childhood or family photograph</small></div></div>
+
         <div>
+
           <span class="tag">The beginning</span>
+
           <h3>A little beginning in the forest</h3>
+
           <p>Your story began in a small hospital deep inside the forest of Valparai. You stayed there only for a couple of months before life brought your family back to Paravur, Kerala.</p>
+
           <p class="caption">Every extraordinary story begins somewhere. Yours began quietly, among the green.</p>
+
         </div>
+
       </div>
+
     </article>
 
+
+
     <article class="chapter">
+
       <div class="chapter-card">
-        <div class="photo">
-          <img src="amma2.jpeg" alt="Paravur roots">
-        </div>
+
+        <div class="photo"><div><span>⌂</span><b>Photo 02 · Growing up</b><small>Replace with a family, school or hometown photograph</small></div></div>
+
         <div>
+
           <span class="tag">Your roots</span>
+
           <h3>Paravur, and a world of your own</h3>
+
           <p>You grew up in Paravur with your older sister and younger brother, surrounded by your family: your mother, your father and the three of you. School, college, growing up together — the everyday things that quietly become a lifetime of memories.</p>
+
           <p class="caption">Before you became everyone's Amma, you were someone's little girl, sister, friend and dreamer.</p>
+
         </div>
+
       </div>
+
     </article>
 
+
+
     <article class="chapter">
+
       <div class="chapter-card">
-        <div class="photo">
-          <img src="amma3.jpeg" alt="A new chapter">
-        </div>
+
+        <div class="photo"><div><span>♡</span><b>Photo 03 · A new chapter</b><small>Replace with a young-adult or wedding photograph</small></div></div>
+
         <div>
+
           <span class="tag">A brave new chapter</span>
+
           <h3>A love that found its way</h3>
+
           <p>Then you met Dad, and you fell in love. There were struggles along the way, but you kept going, faced them together, and got married. You left the familiar world of Paravur and began a new chapter in Aluva.</p>
+
           <p class="caption">Some beginnings ask for courage. You found yours, one step at a time.</p>
+
         </div>
+
       </div>
+
     </article>
 
+
+
     <article class="chapter">
+
       <div class="chapter-card">
-        <div class="photo">
-          <img src="amma4.jpeg" alt="Becoming Amma">
-        </div>
+
+        <div class="photo"><div><span>♡</span><b>Photo 04 · Becoming Amma</b><small>Replace with a photo of Amma and her children</small></div></div>
+
         <div>
+
           <span class="tag">The heart of home</span>
+
           <h3>Then, there were us</h3>
+
           <p>Then your two children arrived, and your world changed again. When Dad moved to Abu Dhabi for work, it was you who took care of us day after day. You were our mother, our safe place and our best friend — even on days when life wasn't easy for you.</p>
+
           <p class="caption">You made room for our worries, our little inconveniences and our biggest feelings. Somehow, there was always room for us.</p>
+
         </div>
+
       </div>
+
     </article>
 
+
+
     <article class="chapter">
+
       <div class="chapter-card">
-        <div class="photo">
-          <img src="amma5.jpeg" alt="The woman today">
-        </div>
+
+        <div class="photo"><div><span>✿</span><b>Photo 05 · The woman today</b><small>Replace with a recent favourite photo of Amma</small></div></div>
+
         <div>
+
           <span class="tag">Many roles, one superwoman: Mom</span>
+
           <h3>The one we all come home to</h3>
+
           <p>Today, the four of us are in four different places. We have grown, and life has carried us into our own corners of the world. But you remain the person we come back to whenever something feels wrong — the one who makes time for each of us, listens, comforts us and holds our sorrows with a heart big enough for all of them.</p>
+
           <p class="caption">Your strength isn't that you never had difficult days. It's that you kept going — and kept loving us through them.</p>
+
         </div>
+
       </div>
+
     </article>
 
-    <article class="chapter">
-      <div class="chapter-card">
-        <div class="photo"><div><span>☼</span><b>Photo 06 · Still becoming</b><small>Replace with a photo of something you love doing</small></div></div>
-        <div>
-          <span class="tag">Still your own person</span>
-          <h3>The things that belong just to you</h3>
-          <p>You love teaching. You love cooking. Maybe one day, a cooking dream of your own will become something real. You value time with family, and you deserve peaceful moments that are yours alone, too.</p>
-          <p class="caption">Your story is more than everything you've done for us. It is also everything you still want to do for yourself.</p>
-        </div>
-      </div>
-    </article>
+
+
+
   </div>
+
+
+
+
+
 </section>
+
+
 
 <section class="section" id="sky">
+
   <div class="head">
+
     <div class="kicker">Gallery No. 02</div>
 
+
+
     <div class="card">
+
       <span class="tag">A note from us</span>
+
       <h3>For the person we all turn to</h3>
+
       <p>We admire your strength — how, no matter how difficult the battle was, you kept pushing forward. We admire how you make time for each of us, how you listen to our smallest worries, and how your heart somehow finds room to comfort everyone.</p>
+
       <p>Even on your bad days, you tried not to let the weight of them fall on us. I know that doesn't mean those days were easy. I hope the years ahead are gentler with you.</p>
+
       <p class="caption">May you receive all the care you've spent a lifetime giving.</p>
+
+
+
+
+
     </div>
+
   </div>
+
 </section>
+
+
+
+
+
+
 
 <section class="section future" id="next50">
+
   <div class="head">
+
     <div class="kicker">The next chapter</div>
+
     <h2>The Next 50</h2>
+
     <p>Not a list of things you must do. Just a collection of beautiful possibilities. You have given so much of yourself to others; may the years ahead make room for you, too.</p>
+
   </div>
+
+
 
   <div class="futuregrid">
-    <article class="futurecard"><div class="num">01</div><h3>More of the world</h3><p>Places you've wanted to see, journeys that leave you with stories, and the freedom to explore at your own pace.</p></article>
-    <article class="futurecard"><div class="num">02</div><h3>A dream of your own</h3><p>Maybe a cooking-related business, maybe a new idea that hasn't found its name yet. Something that belongs to you.</p></article>
-    <article class="futurecard"><div class="num">03</div><h3>Time to teach</h3><p>More chances to share the thing you love about teaching, in whatever form brings you joy.</p></article>
-    <article class="futurecard"><div class="num">04</div><h3>Slow, peaceful days</h3><p>Quiet mornings, unhurried meals, a little space to breathe, and days that don't ask you to carry everything.</p></article>
-    <article class="futurecard"><div class="num">05</div><h3>More family moments</h3><p>Time together that isn't rushed — shared meals, small celebrations, laughter and new memories, wherever we are.</p></article>
-    <article class="futurecard"><div class="num">06</div><h3>All the little joys</h3><p>More of whatever makes you feel like yourself. New interests, familiar comforts, and permission to change your mind.</p></article>
+
+    <article class="futurecard"><div class="num">01</div><h3>More of the world</h3><p>Places you've wanted to see, journeys that leave you with stories, and the freedom to explore at your own pace.</article>
+
+    <article class="futurecard"><div class="num">02</div><h3>A dream of your own</h3><p>Maybe a cooking-related business, maybe a new idea that hasn't found its name yet. Something that belongs to you.</article>
+
+    <article class="futurecard"><div class="num">03</div><h3>Time to teach</h3><p>More chances to share the thing you love about teaching, in whatever form brings you joy.</article>
+
+    <article class="futurecard"><div class="num">04</div><h3>Slow, peaceful days</h3><p>Quiet mornings, unhurried meals, a little space to breathe, and days that don't ask you to carry everything.</article>
+
+    <article class="futurecard"><div class="num">05</div><h3>More family moments</h3><p>Time together that isn't rushed — shared meals, small celebrations, laughter and new memories, wherever we are.</article>
+
+    <article class="futurecard"><div class="num">06</div><h3>All the little joys</h3><p>More of whatever makes you feel like yourself. New interests, familiar comforts, and permission to change your mind.</article>
+
   </div>
+
+
 
   <div class="wish">
+
     <h3>A wish for your next fifty years</h3>
+
     <p>I want the coming years to be the happiest ones yet. I hope you get the things your heart has been quietly wishing for. I hope your mind feels peaceful, that you travel more, that you discover new things you love, and that life gives you time to enjoy the person you have always been beneath every role.</p>
+
+
+
   </div>
+
 </section>
 
+
+
+
+
+
+
 <section class="final">
+
   <div class="finalinner">
+
     <div class="eyebrow">And one thing I hope you always know</div>
+
     <h2>Wherever life takes us,<br><em style="color:var(--deep)">you are home.</em></h2>
+
     <p id="finalMessage">We wish we could be beside you for this birthday. Until we can, we wanted to leave you a little place you can return to — a place filled with your story, the people who love you, and all the things I still wish for you.
+
+
 
 May your next chapter be softer, happier, more peaceful, and full of things that make your own heart feel full.
 
+
+
 Happy 50th birthday, Amma. We love you.</p>
+
     <div class="signature">With all our love, always.</div>
+
     <p style="margin-top:25px"><a class="btn light" href="#home">Return to the beginning ↑</a></p>
+
   </div>
+
 </section>
+
+
+
+
 
 </main>
 
+
+
 <footer>Celebrating the Queen of Our Hearts · A birthday world for Amma</footer>
+
 <div class="toast" id="toast" role="status"></div>
 
+
+
 <script>
+
 (() => {
+
   'use strict';
+
+
 
   const $ = id => document.getElementById(id);
 
+
+
   const toast = message => {
+
     const element = $('toast');
+
     element.textContent = message;
+
     element.classList.add('show');
+
     setTimeout(() => element.classList.remove('show'), 2200);
+
   };
 
-  const seeds = [
-    [
-      'For the strength you showed',
-      'Amma, I admire your strength more than I can explain. Even when life was difficult, you kept moving forward. I hope the years ahead are gentle with you.'
+
+
+  const stars = {
+
+    strength: [
+
+      'The strength star',
+
+      'I admire how you kept pushing forward, no matter how hard the battle was. I hope the next chapter asks less of your strength and gives more back to you.'
+
     ],
-    [
-      'For making time for everyone',
-      'I still wonder how you manage to make each of us feel heard. You have a way of making room for everyone’s worries, even when you have so much on your own plate.'
+
+    home: [
+
+      'The home star',
+
+      'Paravur, Aluva, and every place life has carried us — home has always been more than an address. It is the feeling of being able to come back to you.'
+
     ],
-    [
-      'For being our safe place',
-      'Whenever something goes wrong, you are the person we want to come back to. Thank you for being our comfort, our friend and our home.'
+
+    heart: [
+
+      'The heart star',
+
+      'You make time for each one of us. You listen to the little worries and the big ones, and somehow your heart makes room for them all.'
+
     ],
-    [
-      'For the days you hid your worries',
-      'I know you had difficult days too, even when we were too young to understand. Thank you for the love you gave us. You deserve support and softness, too.'
+
+    peace: [
+
+      'The peace star',
+
+      'I hope you get more quiet mornings, peaceful days, and moments when you can simply breathe without having to take care of everything.'
+
     ],
-    [
-      'A wish for your next chapter',
-      'May you travel more, try the things you have been dreaming about, find peace in your everyday life and receive all the happiness you have wished for others.'
+
+    family: [
+
+      'The family star',
+
+      'We may be in four different places, but we are still connected by the love and care you have given us. Distance can change where we are; it cannot change that.'
+
     ],
-    [
-      'A memory from someone who loves you',
-      '[Add a real memory from a family member or friend here.]'
+
+    dreams: [
+
+      'The dreams star',
+
+      'Your love for teaching, your joy in cooking, and the possibility of a cooking dream of your own — I hope you get time and space to explore what makes you happy.'
+
     ],
-    [
-      'Something we learned from you',
-      '[Ask someone to share one thing Amma taught them.]'
+
+    love: [
+
+      'The love star',
+
+      'You loved us through difficult days, even when you had your own struggles. I hope you feel that love coming back to you in a hundred small ways.'
+
     ],
-    [
-      'A little reason to smile',
-      '[Add a funny family memory, a favourite saying, or a small moment that makes everyone laugh.]'
+
+    future: [
+
+      'The next-fifty star',
+
+      'May the years ahead bring you the things you desire, more travel, new experiences, and a mind that feels peaceful.'
+
+    ],
+
+    kindness: [
+
+      'The kindness star',
+
+      'The way you comfort us is one of the things I will always admire. You make people feel that their worries matter and that they do not have to carry them alone.'
+
+    ],
+
+    you: [
+
+      'The Amma star',
+
+      'Before every role, there is you: a woman with your own dreams, interests, humour, strengths and wishes. This whole little world is here to celebrate you, too.'
+
     ]
+
+  };
+
+
+
+  function showStar(key) {
+
+    const star = stars[key];
+
+    $('starDetail').innerHTML =
+
+      '<strong>' + star[0] + '</strong><p>' + star[1] + '</p>';
+
+  }
+
+
+
+  document.querySelectorAll('[data-star]').forEach(star => {
+
+    star.addEventListener('click', () => showStar(star.dataset.star));
+
+
+
+    star.addEventListener('keydown', event => {
+
+      if (event.key === 'Enter' || event.key === ' ') {
+
+        event.preventDefault();
+
+        showStar(star.dataset.star);
+
+      }
+
+    });
+
+  });
+
+
+
+  $('skyUpload').addEventListener('change', event => {
+
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+
+
+    if (!file.type.startsWith('image/')) {
+
+      return toast('Please choose an image file.');
+
+    }
+
+
+
+    const reader = new FileReader();
+
+
+
+    reader.onload = () => {
+
+      $('skyPreview').src = reader.result;
+
+      $('skyPreview').style.display = 'block';
+
+      toast('Sky image previewed on this device.');
+
+    };
+
+
+
+    reader.readAsDataURL(file);
+
+  });
+
+
+
+  const seeds = [
+
+    [
+
+      'For the strength you showed',
+
+      'Amma, I admire your strength more than I can explain. Even when life was difficult, you kept moving forward. I hope the years ahead are gentle with you.'
+
+    ],
+
+    [
+
+      'For making time for everyone',
+
+      'I still wonder how you manage to make each of us feel heard. You have a way of making room for everyone’s worries, even when you have so much on your own plate.'
+
+    ],
+
+    [
+
+      'For being our safe place',
+
+      'Whenever something goes wrong, you are the person we want to come back to. Thank you for being our comfort, our friend and our home.'
+
+    ],
+
+    [
+
+      'For the days you hid your worries',
+
+      'I know you had difficult days too, even when we were too young to understand. Thank you for the love you gave us. You deserve support and softness, too.'
+
+    ],
+
+    [
+
+      'A wish for your next chapter',
+
+      'May you travel more, try the things you have been dreaming about, find peace in your everyday life and receive all the happiness you have wished for others.'
+
+    ],
+
+    [
+
+      'A memory from someone who loves you',
+
+      '[Add a real memory from a family member or friend here.]'
+
+    ],
+
+    [
+
+      'Something we learned from you',
+
+      '[Ask someone to share one thing Amma taught them.]'
+
+    ],
+
+    [
+
+      'A little reason to smile',
+
+      '[Add a funny family memory, a favourite saying, or a small moment that makes everyone laugh.]'
+
+    ]
+
   ];
 
+
+
   let letters = Array.from({ length: 50 }, (_, index) => ({
+
     title: seeds[index]?.[0] || 'A little piece of love',
+
     body: seeds[index]?.[1] ||
+
       '[This envelope is waiting for a message, memory, photograph caption or wish from someone who loves Amma.]',
+
     real: index < 5
+
   }));
+
+
 
   let current = 0;
 
+
+
   function renderLetters() {
+
     const container = $('envelopes');
-    if (!container) return;
+
     container.innerHTML = '';
 
+
+
     letters.forEach((letter, index) => {
+
       const button = document.createElement('button');
+
       button.className = 'envelope';
+
       button.type = 'button';
+
       button.setAttribute('aria-label', 'Open letter ' + (index + 1));
 
+
+
       button.innerHTML =
+
         '<span>✉</span>' +
+
         '<small>' + String(index + 1).padStart(2, '0') + ' / 50</small>' +
+
         '<em>' + (letter.real ? 'A note for you' : 'Open when ready') + '</em>';
 
+
+
       button.onclick = () => openLetter(index);
+
       container.appendChild(button);
+
     });
+
   }
 
+
+
+  function openLetter(index) {
+
+    current = index;
+
+    const letter = letters[index];
+
+
+
+    $('letterTag').textContent =
+
+      'Letter ' + String(index + 1).padStart(2, '0') + ' of 50';
+
+
+
+    $('letterTitle').textContent = letter.title;
+
+    $('letterBody').textContent = letter.body;
+
+    $('letterText').value = letter.body;
+
+    $('letter').classList.add('open');
+
+    $('editBox').style.display = 'none';
+
+    $('letterActions').style.display = 'flex';
+
+
+
+    $('letter').scrollIntoView({
+
+      behavior: 'smooth',
+
+      block: 'nearest'
+
+    });
+
+  }
+
+
+
+  $('editLetter').onclick = () => {
+
+    $('editBox').style.display = 'block';
+
+    $('letterActions').style.display = 'none';
+
+  };
+
+
+
+  $('cancelEdit').onclick = () => {
+
+    $('editBox').style.display = 'none';
+
+    $('letterActions').style.display = 'flex';
+
+  };
+
+
+
+  $('closeLetter').onclick = () => {
+
+    $('letter').classList.remove('open');
+
+  };
+
+
+
+  $('saveLetter').onclick = () => {
+
+    const body = $('letterText').value.trim();
+
+
+
+    if (!body) return toast('Add a message before saving.');
+
+
+
+    letters[current].body = body;
+
+    letters[current].real = !body.startsWith('[');
+
+
+
+    if (letters[current].title === 'A little piece of love') {
+
+      letters[current].title = 'A message for Amma';
+
+    }
+
+
+
+    openLetter(current);
+
+    renderLetters();
+
+    toast('Preview updated for this session.');
+
+  };
+
+
+
+  function applyPreview() {
+
+    const name = $('editName').value.trim() || 'Amma';
+
+
+
+    $('brand').textContent = 'For ' + name + ', with all my love';
+
+    $('heroDate').textContent =
+
+      ($('editDate').value.trim() || 'A celebration of Amma') +
+
+      ' · A celebration of ' + name;
+
+
+
+    $('subtitle').textContent = $('editSubtitle').value;
+
+    $('finalMessage').textContent = $('editFinal').value;
+
+
+
+    toast('Preview changes applied; not saved into the file.');
+
+  }
+
+
+
+  function resetPreview() {
+
+    $('editName').value = 'Amma';
+
+    $('editDate').value = '30 October 2026';
+
+
+
+    $('editSubtitle').value =
+
+      "A celebration of the life you've lived, the love you've given, and all the beautiful things still waiting for you.";
+
+
+
+    $('editFinal').value =
+
+      "I wish I could be beside you for this birthday. Until I can, I wanted to leave you a little place you can return to — a place filled with your story, the people who love you, and all the things I still wish for you.\n\nMay your next chapter be softer, happier, more peaceful, and full of things that make your own heart feel full.\n\nHappy 50th birthday, Amma. I love you.";
+
+
+
+    applyPreview();
+
+  }
+
+
+
+  $('apply').onclick = applyPreview;
+
+  $('reset').onclick = resetPreview;
+
+
+
   renderLetters();
+
 })();
+
 </script>
+
 </body>
+
 </html>
